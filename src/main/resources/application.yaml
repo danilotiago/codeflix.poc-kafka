@@ -1,0 +1,26 @@
+spring:
+    kafka:
+        bootstrap-servers: localhost:9094
+        client-id: my-application-test
+        producer:
+            acks: all
+
+            ## CUSTOM CONFIGURATIONS FOR IDEMPOTENCE (NECESSARY ACKS=ALL)
+            enable:
+                idempotence: true
+
+            ## CUSTOM CONFIGURATIONS FOR TIMEOUTS
+            timeout:
+                ms:
+                    request: 70000
+                    delivery: 100000
+
+        consumer:
+            group-id: mygroup-test
+            auto:
+                offset:
+                    reset: earliest
+
+        ## CUSTOM CONFIGURATIONS FOR TOPIC NAME
+        topics:
+            test: onlytests

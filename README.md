@@ -1,0 +1,77 @@
+DOC
+
+Parametrizações: <br>
+https://kafka.apache.org/21/javadoc/org/apache/kafka/clients/producer/ProducerConfig.html <br>
+
+EX:
+acks = -1<br>
+batch.size = 16384<br>
+bootstrap.servers = [localhost:9094]<br>
+buffer.memory = 33554432<br>
+client.dns.lookup = use_all_dns_ips<br>
+client.id = producer-1<br>
+compression.type = none<br>
+connections.max.idle.ms = 540000<br>
+delivery.timeout.ms = 10000<br>
+enable.idempotence = true<br>
+interceptor.classes = []<br>
+internal.auto.downgrade.txn.commit = true<br>
+key.serializer = class org.apache.kafka.common.serialization.StringSerializer<br>
+linger.ms = 0<br>
+max.block.ms = 60000<br>
+max.in.flight.requests.per.connection = 5<br>
+max.request.size = 1048576<br>
+metadata.max.age.ms = 300000<br>
+metadata.max.idle.ms = 300000<br>
+metric.reporters = []<br>
+metrics.num.samples = 2<br>
+metrics.recording.level = INFO<br>
+metrics.sample.window.ms = 30000<br>
+partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner<br>
+receive.buffer.bytes = 32768<br>
+reconnect.backoff.max.ms = 1000<br>
+reconnect.backoff.ms = 50<br>
+request.timeout.ms = 7000<br>
+retries = 2147483647<br>
+retry.backoff.ms = 100<br>
+sasl.client.callback.handler.class = null<br>
+sasl.jaas.config = null<br>
+sasl.kerberos.kinit.cmd = /usr/bin/kinit<br>
+sasl.kerberos.min.time.before.relogin = 60000<br>
+sasl.kerberos.service.name = null<br>
+sasl.kerberos.ticket.renew.jitter = 0.05<br>
+sasl.kerberos.ticket.renew.window.factor = 0.8<br>
+sasl.login.callback.handler.class = null<br>
+sasl.login.class = null<br>
+sasl.login.refresh.buffer.seconds = 300<br>
+sasl.login.refresh.min.period.seconds = 60<br>
+sasl.login.refresh.window.factor = 0.8<br>
+sasl.login.refresh.window.jitter = 0.05<br>
+sasl.mechanism = GSSAPI<br>
+security.protocol = PLAINTEXT<br>
+security.providers = null<br>
+send.buffer.bytes = 131072<br>
+socket.connection.setup.timeout.max.ms = 127000<br>
+socket.connection.setup.timeout.ms = 10000<br>
+ssl.cipher.suites = null<br>
+ssl.enabled.protocols = [TLSv1.2, TLSv1.3]<br>
+ssl.endpoint.identification.algorithm = https<br>
+ssl.engine.factory.class = null<br>
+ssl.key.password = null<br>
+ssl.keymanager.algorithm = SunX509<br>
+ssl.keystore.certificate.chain = null<br>
+ssl.keystore.key = null<br>
+ssl.keystore.location = null<br>
+ssl.keystore.password = null<br>
+ssl.keystore.type = JKS<br>
+ssl.protocol = TLSv1.3<br>
+ssl.provider = null<br>
+ssl.secure.random.implementation = null<br>
+ssl.trustmanager.algorithm = PKIX<br>
+ssl.truststore.certificates = null<br>
+ssl.truststore.location = null<br>
+ssl.truststore.password = null<br>
+ssl.truststore.type = JKS<br>
+transaction.timeout.ms = 60000<br>
+transactional.id = null<br>
+value.serializer = class org.apache.kafka.common.serialization.StringSerializer<br>
