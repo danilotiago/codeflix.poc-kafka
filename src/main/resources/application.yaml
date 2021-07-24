@@ -19,7 +19,7 @@ spring:
             group-id: mygroup-test
             auto:
                 offset:
-                    reset: earliest
+                    reset: latest
 
         ## CUSTOM CONFIGURATIONS FOR TOPIC NAME
         topics:
