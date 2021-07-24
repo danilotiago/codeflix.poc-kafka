@@ -2,8 +2,9 @@ DOC
 
 Parametrizações: <br>
 https://kafka.apache.org/21/javadoc/org/apache/kafka/clients/producer/ProducerConfig.html <br>
+https://kafka.apache.org/21/javadoc/org/apache/kafka/clients/consumer/ConsumerConfig.html <br>
 
-EX:
+EX Producer:
 acks = -1<br>
 batch.size = 16384<br>
 bootstrap.servers = [localhost:9094]<br>
@@ -75,3 +76,82 @@ ssl.truststore.type = JKS<br>
 transaction.timeout.ms = 60000<br>
 transactional.id = null<br>
 value.serializer = class org.apache.kafka.common.serialization.StringSerializer<br>
+
+Ex Consumer: <br>
+allow.auto.create.topics = true<br>
+auto.commit.interval.ms = 5000<br>
+auto.offset.reset = latest<br>
+bootstrap.servers = [localhost:9094]<br>
+check.crcs = true<br>
+client.dns.lookup = use_all_dns_ips<br>
+client.id = my-application-test-0<br>
+client.rack =<br>
+connections.max.idle.ms = 540000<br>
+default.api.timeout.ms = 60000<br>
+enable.auto.commit = false<br>
+exclude.internal.topics = true<br>
+fetch.max.bytes = 52428800<br>
+fetch.max.wait.ms = 500<br>
+fetch.min.bytes = 1<br>
+group.id = mygroup-test<br>
+group.instance.id = null<br>
+heartbeat.interval.ms = 3000<br>
+interceptor.classes = []<br>
+internal.leave.group.on.close = true<br>
+internal.throw.on.fetch.stable.offset.unsupported = false<br>
+isolation.level = read_uncommitted<br>
+key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer<br>
+max.partition.fetch.bytes = 1048576<br>
+max.poll.interval.ms = 300000<br>
+max.poll.records = 500<br>
+metadata.max.age.ms = 300000<br>
+metric.reporters = []<br>
+metrics.num.samples = 2<br>
+metrics.recording.level = INFO<br>
+metrics.sample.window.ms = 30000<br>
+partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]<br>
+receive.buffer.bytes = 65536<br>
+reconnect.backoff.max.ms = 1000<br>
+reconnect.backoff.ms = 50<br>
+request.timeout.ms = 30000<br>
+retry.backoff.ms = 100<br>
+sasl.client.callback.handler.class = null<br>
+sasl.jaas.config = null<br>
+sasl.kerberos.kinit.cmd = /usr/bin/kinit<br>
+sasl.kerberos.min.time.before.relogin = 60000<br>
+sasl.kerberos.service.name = null<br>
+sasl.kerberos.ticket.renew.jitter = 0.05<br>
+sasl.kerberos.ticket.renew.window.factor = 0.8<br>
+sasl.login.callback.handler.class = null<br>
+sasl.login.class = null<br>
+sasl.login.refresh.buffer.seconds = 300<br>
+sasl.login.refresh.min.period.seconds = 60<br>
+sasl.login.refresh.window.factor = 0.8<br>
+sasl.login.refresh.window.jitter = 0.05<br>
+sasl.mechanism = GSSAPI<br>
+security.protocol = PLAINTEXT<br>
+security.providers = null<br>
+send.buffer.bytes = 131072<br>
+session.timeout.ms = 10000<br>
+socket.connection.setup.timeout.max.ms = 127000<br>
+socket.connection.setup.timeout.ms = 10000<br>
+ssl.cipher.suites = null<br>
+ssl.enabled.protocols = [TLSv1.2, TLSv1.3]<br>
+ssl.endpoint.identification.algorithm = https<br>
+ssl.engine.factory.class = null<br>
+ssl.key.password = null<br>
+ssl.keymanager.algorithm = SunX509<br>
+ssl.keystore.certificate.chain = null<br>
+ssl.keystore.key = null<br>
+ssl.keystore.location = null<br>
+ssl.keystore.password = null<br>
+ssl.keystore.type = JKS<br>
+ssl.protocol = TLSv1.3<br>
+ssl.provider = null<br>
+ssl.secure.random.implementation = null<br>
+ssl.trustmanager.algorithm = PKIX<br>
+ssl.truststore.certificates = null<br>
+ssl.truststore.location = null<br>
+ssl.truststore.password = null<br>
+ssl.truststore.type = JKS<br>
+value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer<br>
