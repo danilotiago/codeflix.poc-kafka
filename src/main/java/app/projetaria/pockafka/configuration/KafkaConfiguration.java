@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
+import org.springframework.kafka.listener.ContainerProperties;
 
 import java.util.Map;
 
@@ -24,6 +25,9 @@ public class KafkaConfiguration {
 
     @Value("${spring.kafka.producer.timeout.ms.delivery}")
     private String deliveryTimeoutMsValue;
+
+    @Value("${spring.kafka.listener.ack-mode}")
+    private String ackModeValue;
 
     /**
      * Producer bean:: factory
@@ -73,6 +77,8 @@ public class KafkaConfiguration {
     public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory(final ConsumerFactory consumerFactory) {
         ConcurrentKafkaListenerContainerFactory<String, String> concurrentListenerFactory = new ConcurrentKafkaListenerContainerFactory<>();
         concurrentListenerFactory.setConsumerFactory(consumerFactory);
+
+        concurrentListenerFactory.getContainerProperties().setAckMode(ContainerProperties.AckMode.valueOf(ackModeValue));
 
         return concurrentListenerFactory;
     }

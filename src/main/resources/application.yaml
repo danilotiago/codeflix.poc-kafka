@@ -2,6 +2,8 @@ spring:
     kafka:
         bootstrap-servers: localhost:9094
         client-id: my-application-test
+        listener:
+            ack-mode: MANUAL_IMMEDIATE
         producer:
             acks: all
 
@@ -17,6 +19,10 @@ spring:
 
         consumer:
             group-id: mygroup-test
+
+            ## WORKS WITH LISTENER.ACK_MODE
+            enable-auto-commit: false
+
             auto:
                 offset:
                     reset: earliest
